@@ -4,7 +4,7 @@ This project renders a fully dynamic configuration form based on a structured JS
 
 ---
 
-## 📁 Folder Structure
+## 📁 Folders Structure
 ```
 src/
 ├── App.tsx
@@ -40,7 +40,7 @@ Then open: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## ✅ Features & Functionality
+## Features & Functionality
 - Dynamic rendering of dropdowns from JSON config structure
 - Custom validation: requires at least 3 fields selected
 - Form values are submitted in the same order as config
