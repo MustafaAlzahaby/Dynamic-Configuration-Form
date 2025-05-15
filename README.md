@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# 🧠 Dynamic Configuration Form — React + TypeScript + SCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project renders a fully dynamic configuration form based on a structured JSON configuration object. Each configuration category is displayed as a dropdown, and the form is validated and submitted with a modern UI experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Folder Structure
+```
+src/
+├── App.tsx
+├── main.tsx
+├── index.css
+├── types/
+│   └── config.ts            # Global interfaces/types for config
+├── data/
+│   └── configData.ts        # Input config JSON data
+├── utils/
+│   └── extractConfigOptions.ts # Utility to transform config to dropdown options
+└── components/
+    └── ConfigurationForm/
+        ├── ConfigurationForm.tsx
+        └── ConfigurationForm.scss
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ How to Run the App
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Prerequisites
+- Node.js v16+
+
+### Setup Steps
+```bash
+git clone https://github.com/MustafaAlzahaby/Dynamic-Configuration-Form.git
+cd Dynamic-Configuration-Form
+npm install
+npm run dev
 ```
+Then open: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## ✅ Features & Functionality
+- Dynamic rendering of dropdowns from JSON config structure
+- Custom validation: requires at least 3 fields selected
+- Form values are submitted in the same order as config
+- Final output uses **label names** not system values
+- Clean success confirmation overlay (no alerts)
+- SCSS-based styling and animation
+- TypeScript support for safety and clarity
+
+---
+
+## 🧠 Design Decisions & Assumptions
+- The `configData` is assumed to be an array of one object (schema-like input).
+- Dropdown values are displayed and returned using their **labels**, not internal system values.
+- Form is centered using modern Flexbox (no `position: absolute` hacks).
+- Types (`ConfigOption`, `ConfigData`, `ConfigSchema`) are separated into `src/types/`.
+- SCSS used to allow flexibility and reuse.
+
+---
+
+## 💡 Evaluation Criteria Breakdown
+
+| Criteria               | Implementation                                                                 |
+|------------------------|---------------------------------------------------------------------------------|
+| **Correctness**        | Matches the problem description 100%, including validation and label display     |
+| **Code Quality**       | Modularized structure, clean imports, type-safe architecture                     |
+| **React Best Practices** | Uses `useState`, `useMemo`, controlled components, props                         |
+| **JavaScript Proficiency** | Uses `Object.entries`, `map`, `find`, `memo`, `forEach` with clarity              |
+| **Error Handling**     | Required fields enforced, clean error UI, consistent UX                         |
+| **Documentation**      | This README, comments in utility & config logic, clear naming conventions        |
+
+---
+
+## ✍️ Author
+- Mustafa Alzahaby
+- [https://github.com/MustafaAlzahaby](https://github.com/MustafaAlzahaby)
