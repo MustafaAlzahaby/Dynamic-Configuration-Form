@@ -1,4 +1,4 @@
-# 🧠 Dynamic Configuration Form — React + TypeScript + SCSS
+# Dynamic Configuration Form — React + TypeScript + SCSS
 
 This project renders a fully dynamic configuration form based on a structured JSON configuration object. Each configuration category is displayed as a dropdown, and the form is validated and submitted with a modern UI experience.
 
@@ -24,7 +24,7 @@ src/
 
 ---
 
-## 🛠️ How to Run the App
+## How to Run the App
 
 ### Prerequisites
 - Node.js v16+
@@ -51,7 +51,7 @@ Then open: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🧠 Design Decisions & Assumptions
+## Design Decisions & Assumptions
 - The `configData` is assumed to be an array of one object (schema-like input).
 - Dropdown values are displayed and returned using their **labels**, not internal system values.
 - Form is centered using modern Flexbox (no `position: absolute` hacks).
@@ -60,7 +60,7 @@ Then open: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 💡 Evaluation Criteria Breakdown
+## Evaluation Criteria Breakdown
 
 | Criteria               | Implementation                                                                 |
 |------------------------|---------------------------------------------------------------------------------|
@@ -70,9 +70,3 @@ Then open: [http://localhost:5173](http://localhost:5173)
 | **JavaScript Proficiency** | Uses `Object.entries`, `map`, `find`, `memo`, `forEach` with clarity              |
 | **Error Handling**     | Required fields enforced, clean error UI, consistent UX                         |
 | **Documentation**      | This README, comments in utility & config logic, clear naming conventions        |
-
----
-
-## ✍️ Author
-- Mustafa Alzahaby
-- [https://github.com/MustafaAlzahaby](https://github.com/MustafaAlzahaby)
