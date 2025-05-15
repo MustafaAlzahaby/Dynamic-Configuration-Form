@@ -4,11 +4,6 @@ This project renders a fully dynamic configuration form based on a structured JS
 
 ---
 
-## 🚀 Live Demo (Optional)
-> _(Add your deployed link here, e.g. Vercel or Netlify)_
-
----
-
 ## 📁 Folder Structure
 ```
 src/
@@ -80,6 +75,3 @@ Then open: [http://localhost:5173](http://localhost:5173)
 - [https://github.com/MustafaAlzahaby](https://github.com/MustafaAlzahaby)
 
 ---
-
-## 📄 License
-MIT
