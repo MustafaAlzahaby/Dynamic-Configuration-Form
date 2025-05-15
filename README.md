@@ -73,5 +73,3 @@ Then open: [http://localhost:5173](http://localhost:5173)
 ## ✍️ Author
 - Mustafa Alzahaby
 - [https://github.com/MustafaAlzahaby](https://github.com/MustafaAlzahaby)
-
----
