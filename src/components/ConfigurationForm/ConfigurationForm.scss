@@ -1,0 +1,110 @@
+.config-form {
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 2rem auto;
+
+  h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #475569; 
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #007bff;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    select {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+  }
+
+  .error {
+    color: red;
+    margin-bottom: 1rem;
+    min-height: 1.2rem;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e6f7ff;
+  color: #007bff;
+  padding: 1rem 2rem;
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  animation: fadeInOut 2s ease forwards;
+  z-index: 1000;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+}
+
